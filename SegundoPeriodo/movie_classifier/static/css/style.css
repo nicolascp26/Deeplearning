@@ -70,9 +70,10 @@ button:hover{
   border: none;
   background-size: 200%;
   outline: none;
-  background: green;
+  background: #62d162;
   color: white;
   border-radius: 50px;
+  transition: all .5s ease;
 }
 .btn-danger{
   display: block;
@@ -81,9 +82,19 @@ button:hover{
   border: none;
   background-size: 200%;
   outline: none;
-  background: red;
+  background: #ff6161;
   color: white;
   border-radius: 50px;
+  transition: all .5s ease;
+}
+
+.btn-danger:hover{
+  color: white;
+  background-color: red;
+}
+.btn-success:hover{
+    color: white;
+    background-color: green;
 }
 
 /* Falling objects style*/
