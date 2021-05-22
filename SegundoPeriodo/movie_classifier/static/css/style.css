@@ -82,7 +82,7 @@ button:hover{
   border: none;
   background-size: 200%;
   outline: none;
-  background:#ff6161;
+  background: #ff6161;
   color: white;
   border-radius: 50px;
   transition: all .5s ease;
@@ -96,6 +96,7 @@ button:hover{
     color: white;
     background-color: green;
 }
+
 
 /* Falling objects style*/
 
