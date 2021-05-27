@@ -58,6 +58,7 @@ button{
   cursor: pointer;
   transition: .5s;
   border-radius: 50px;
+  font-size: 1em;
 }
 button:hover{
   background-position: right;
