@@ -39,6 +39,13 @@ def sqlite_entry(path, document, y):
     conn.commit()
     conn.close()
 
+def sqlite_select(path):
+	conn = sqlite3.connect(path)
+	c = conn.cursor()
+	c.execute("DELETE FROM review_db WHERE date BETWEEN '2021-05-18 00:21:47' AND '2021-05-19 23:38:01'")
+	c.execute("SELECT review, sentiment, date FROM review_db")
+	results = c.fetchall()
+	return results
 
 # Flask
 class ReviewForm(Form):
@@ -52,6 +59,10 @@ def index():
     form = ReviewForm(request.form)
     return render_template('reviewform.html', form=form)
 
+@app.route('/reviewsreport', methods=['POST'])
+def sqliteReport():
+	dataset =sqlite_select(db)
+	return render_template('reviewsreport.html', dataset=dataset)
 
 @app.route('/results', methods=['POST'])
 def results():
