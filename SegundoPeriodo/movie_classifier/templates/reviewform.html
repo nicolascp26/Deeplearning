@@ -44,8 +44,13 @@
         <div>
           {{ render_field(form.moviereview, class="txtb", cols='30', rows='10') }}
         </div>
-        <button type="submit" class="btn-mainbtn"> Let's analyze it!</button>
+        <button type="submit" class="btn-mainbtn"> Analyze now!</button>
       </form>
+      <div id='sqlite'>
+            <form method=post action="/reviewsreport">
+                <button type=submit value=''>Classifier Report</button
+            </form>
+        </div>
     </div>
   </section>
   <footer>
