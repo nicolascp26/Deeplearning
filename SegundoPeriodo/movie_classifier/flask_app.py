@@ -42,7 +42,6 @@ def sqlite_entry(path, document, y):
 def sqlite_select(path):
 	conn = sqlite3.connect(path)
 	c = conn.cursor()
-	c.execute("DELETE FROM review_db WHERE date BETWEEN '2021-05-18 00:21:47' AND '2021-05-19 23:38:01'")
 	c.execute("SELECT review, sentiment, date FROM review_db")
 	results = c.fetchall()
 	return results
