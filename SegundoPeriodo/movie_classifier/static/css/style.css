@@ -38,6 +38,11 @@ table,th,td{
   padding: 10px;
 }
 
+tr:hover{
+  background-color:#b6d4f6;
+  font-size: large;
+}
+
 td:nth-child(1) { 
   width: 70%;
 }
